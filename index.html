@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrushCheck - Is it Real or Just a Dream?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <!-- Simple SVG Logo Placeholder -->
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 35.8333C20 35.8333 35.8333 25.8333 35.8333 15.8333C35.8333 10.8333 31.6667 6.66666 26.6667 6.66666C23.8333 6.66666 21.3333 8.08332 20 10.25C18.6667 8.08332 16.1667 6.66666 13.3333 6.66666C8.33333 6.66666 4.16667 10.8333 4.16667 15.8333C4.16667 25.8333 20 35.8333 20 35.8333Z" fill="#FF6B81" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="26" cy="14" r="6" stroke="white" stroke-width="2"/>
+                    <path d="M28 16L24 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h1>CrushCheck</h1>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Input Section -->
+            <section id="input-section" class="active">
+                <h2>Who's on your mind?</h2>
+                
+                <div class="input-group">
+                    <label>Select Gender</label>
+                    <div class="gender-options">
+                        <button class="gender-btn" data-gender="female" aria-label="Female">♀</button>
+                        <button class="gender-btn" data-gender="male" aria-label="Male">♂</button>
+                        <button class="gender-btn" data-gender="other" aria-label="Other">⚧</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="personality-type">Personality Type</label>
+                    <select id="personality-type">
+                        <option value="" disabled selected>Select their vibe...</option>
+                        <option value="shy">Shy & Sweet</option>
+                        <option value="outgoing">Outgoing & Loud</option>
+                        <option value="mysterious">Mysterious & Cool</option>
+                        <option value="intellectual">Smart & Nerdy</option>
+                        <option value="funny">Funny & Chaotic</option>
+                    </select>
+                </div>
+
+                <button id="check-btn" class="primary-btn" disabled>Check Compatibility</button>
+            </section>
+
+            <!-- Loading Section -->
+            <section id="loading-section" class="hidden">
+                <div class="pulse-heart">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 35.8333C20 35.8333 35.8333 25.8333 35.8333 15.8333C35.8333 10.8333 31.6667 6.66666 26.6667 6.66666C23.8333 6.66666 21.3333 8.08332 20 10.25C18.6667 8.08332 16.1667 6.66666 13.3333 6.66666C8.33333 6.66666 4.16667 10.8333 4.16667 15.8333C4.16667 25.8333 20 35.8333 20 35.8333Z" fill="url(#paint0_linear)" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="20" y1="6.66666" x2="20" y2="35.8333" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF9A9E"/>
+                                <stop offset="1" stop-color="#FECFEF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <p id="loading-text">Searching internet...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section id="result-section" class="hidden">
+                <div class="result-card">
+                    <h3>Reality Check</h3>
+                    <div class="percentage-circle">
+                        <span id="result-percentage">0%</span>
+                        <span class="label">Real</span>
+                    </div>
+                    <p id="result-message">It's looking good!</p>
+                </div>
+                <button id="reset-btn" class="secondary-btn">Check Another</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
